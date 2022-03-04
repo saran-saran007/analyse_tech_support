@@ -33,3 +33,9 @@ do
   cat $cfg_file > $ssd_file
   cat $shcmd_file >> $ssd_file
 done
+
+if [ $# -eq 3 ]
+then
+grep $3 ctx_ssd* > result
+printf "matching lines in the file - result\n"
+fi
